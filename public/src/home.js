@@ -52,15 +52,12 @@ function resultTopFive(books) {
 
 function getMostPopularBooks(books) {
   let mostPopularBooks = [];
-  let topBooks = resultTopFive
     for (const book of books) {
       mostPopularBooks.push({name: book.title, count: book.borrows.length});
     }
-      mostPopularBooks.sort((a, b) => (a.count < b.count ? 1 : -1));
-      mostPopularBooks.splice(5);
-  return mostPopularBooks
+        let topBooks = resultTopFive(getMostPopularBooks)
+  return topBooks
 }
-  
   
  
 
