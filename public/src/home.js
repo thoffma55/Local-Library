@@ -55,7 +55,7 @@ function getMostPopularBooks(books) {
     for (const book of books) {
       mostPopularBooks.push({name: book.title, count: book.borrows.length});
     }
-        let topBooks = resultTopFive(getMostPopularBooks)
+        let topBooks = resultTopFive(mostPopularBooks)
   return topBooks
 }
   
